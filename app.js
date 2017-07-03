@@ -12,7 +12,7 @@ app.get('/', function (req, res){
   fs.readdir(dir, (err, files) => {
     var randomFile = files[Math.floor(Math.random() * files.length)];
     console.log('Sending random file from dir: ' + randomFile);
-    res.sendFile(dir + '\\' + randomFile);
+    res.sendFile(dir + '/' + randomFile);
   });
 });
 
@@ -20,7 +20,7 @@ app.get('/:index(\\d+)/', function(req, res){
   console.log('Sending file number: ' + req.params.index);
   fs.readdir(dir, (err, files) => {
     if (req.params.index >= files.length) { res.send('Index out of bounds'); }
-    else { res.sendFile(dir + '\\' + files[req.params.index]); }
+    else { res.sendFile(dir + '/' + files[req.params.index]); }
   });
 });
 
