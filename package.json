@@ -1,0 +1,25 @@
+{
+  "name": "node-file-stream",
+  "version": "0.0.1",
+  "description": "Simple (media) file streamer with nodejs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PlasmaGebardi/node-file-stream.git"
+  },
+  "author": "Matti Määttänen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PlasmaGebardi/node-file-stream/issues"
+  },
+  "homepage": "https://github.com/PlasmaGebardi/node-file-stream#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7"
+  }
+}
