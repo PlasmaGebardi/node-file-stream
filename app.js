@@ -24,6 +24,16 @@ app.get('/:index(\\d+)/', function(req, res){
   });
 });
 
+app.get('/video/:file/', function(req, res){
+  console.log('Video file ' + req.params.file + ' requested');
+  res.send('<video src="/' + req.params.file + '" controls> No browser support. </video>');
+});
+
+app.get('/audio/:file/', function(req, res){
+  console.log('Audio file ' + req.params.file + ' requested');
+  res.send('<audio src="/' + req.params.file + '" controls> No browser support. </audio>');
+});
+
 var server = app.listen(app.get('port'), function(){
   console.log('Server running on port ' + server.address().port);
   console.log('Serving path: ' + dir);
